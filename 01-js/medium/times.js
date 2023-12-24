@@ -9,5 +9,31 @@ There is no automated test for this one, this is more for you to understand time
 */
 
 function calculateTime(n) {
-    return 0.01;
+    console.log("Begin");
+    let currentTime = new Date();
+
+    let currentHours = currentTime.getHours();
+    let currentMinutes = currentTime.getMinutes();
+    let currentSeconds = currentTime.getSeconds();
+    let currentMilliseconds = currentTime.getMilliseconds();
+    let t1=currentMilliseconds;
+    console.log(`Current time: ${currentHours}:${currentMinutes}:${currentSeconds}.${currentMilliseconds}`);
+
+    let sum=0;
+    for(let i=1;i<=n;i++)
+    {
+        sum=sum+i;
+    }
+    console.log("End");
+    currentTime = new Date();
+
+    currentHours = currentTime.getHours();
+    currentMinutes = currentTime.getMinutes();
+    currentSeconds = currentTime.getSeconds();
+    currentMilliseconds = currentTime.getMilliseconds();
+    t2=currentMilliseconds;
+    console.log(`Current time: ${currentHours}:${currentMinutes}:${currentSeconds}.${currentMilliseconds}`);
+    console.log("Time elapsed " + (t2-t1)+"ms");
+
 }
+calculateTime(100);
